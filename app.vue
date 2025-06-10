@@ -80,8 +80,8 @@ const generateQRCode = async () => {
   
   try {
     // Options for the QR code generation.
-    const options = {
-      width: 300,
+    const options: QRCode.QRCodeToDataURLOptions = {
+      width: 600,
       margin: 2,
       errorCorrectionLevel: 'H' // High error correction level
     };
@@ -99,26 +99,6 @@ const generateQRCode = async () => {
 </script>
 
 <style>
-/* Stellt sicher, dass Tailwind CSS korrekt angewendet wird.
-  Für ein Nuxt.js-Projekt sollten Sie das @nuxtjs/tailwindcss-Modul installieren,
-  aber für ein schnelles Beispiel reicht die Einbindung via CDN.
-  Fügen Sie Ihrer nuxt.config.ts Folgendes hinzu:
-  
-  export default defineNuxtConfig({
-    css: ['~/assets/css/main.css'],
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
-    },
-  })
-  
-  Und erstellen Sie die Datei `assets/css/main.css` mit:
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-*/
 body {
   font-family: 'Inter', sans-serif;
 }
